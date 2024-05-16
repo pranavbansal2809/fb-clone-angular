@@ -1,0 +1,129 @@
+{
+  "users": [
+    {
+      "firstName": "Pranav",
+      "lastName": "Bansal",
+      "email": "sample2@gmail.com",
+      "password": "abcd123we",
+      "confirmPassword": "abcd1234",
+      "dob": "2023-12-01",
+      "phNum": "56565656",
+      "photo": "https://images.unsplash.com/11/berries.jpg?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isActive": true,
+      "isAdmin": true,
+      "id": 1
+    },
+    {
+      "firstName": "Pranav2",
+      "lastName": "Bansal2",
+      "email": "sample21@gmail.com",
+      "password": "abcd1234",
+      "friendStatus": "",
+      "dob": "2023-12-27",
+      "photo": "https://picsum.photos/id/870/200/300?grayscale&blur=2",
+      "isActive": true,
+      "isAdmin": false,
+      "id": 2
+    },
+    {
+      "firstName": "Pranav21",
+      "lastName": "Bansal21",
+      "email": "sample22@gmail.com",
+      "password": "abcd1234",
+      "friendStatus": "",
+      "dob": "2023-12-06",
+      "photo": "https://picsum.photos/id/870/200/300?grayscale&blur=2",
+      "isActive": true,
+      "isAdmin": false,
+      "id": 3
+    },
+    {
+      "firstName": "Pranav23",
+      "lastName": "Bansal23",
+      "email": "sample23@gmail.com",
+      "password": "abcd1234",
+      "friendStatus": "",
+      "dob": "2023-11-08",
+      "photo": "https://picsum.photos/id/870/200/300?grayscale&blur=2",
+      "isActive": true,
+      "isAdmin": false,
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "postText": "this is post 2",
+      "postImage": "https://picsum.photos/536/354",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postText": "this is post 2",
+      "postImage": "https://picsum.photos/536/354",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "postText": "Just testing again",
+      "postImage": "https://picsum.photos/200/300?grayscale",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "postText": "testing from another user",
+      "postImage": "https://picsum.photos/id/29/4000/2670",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "postText": "let's try this one",
+      "postImage": "https://picsum.photos/id/29/4000/2670",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "postText": "just testing again",
+      "postImage": "https://picsum.photos/id/1/367/267",
+      "isActive": true,
+      "isAdmin": false,
+      "userId": 1,
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "userId": 1,
+      "friendId": "3",
+      "status": "Friends",
+      "id": 1
+    },
+    {
+      "userId": "4",
+      "friendId": "2",
+      "status": "Request Pending",
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "friendId": "2",
+      "status": "Friends",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "friendId": "3",
+      "status": "Request Pending",
+      "id": 5
+    }
+  ]
+}

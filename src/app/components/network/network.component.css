@@ -1,0 +1,36 @@
+.outerDiv{
+  margin: 5%;
+}
+.friendListDiv{
+  margin-left: 4%;
+  margin-top: 3%;
+  margin-right: 5%;
+  float: right;
+  width: 60%;
+  border-color: #1f1f1f;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2%;
+  margin-bottom: 1%;
+  height: 10%;
+}
+#friendImage{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  float: left;
+}
+.friendNameTextCSS{
+  width: 50%;
+  float: left;
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 4%;
+  text-decoration: bold;
+}
+#friendBtn{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}

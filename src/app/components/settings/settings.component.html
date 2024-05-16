@@ -1,0 +1,207 @@
+<h3>Profile Settings</h3>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group  ">
+    <label for="inputFirstName">First Name:</label>
+    <span>
+      <input
+        type="text"
+        class="form-control"
+        id="inputFirstName"
+        value="{{ userData.firstName }}"
+        formControlName="firstName"
+        [ngClass]="{
+          'is-invalid':
+            isUserFormSubmitted && userFormControls['firstName'].errors
+        }"
+      />
+      <div
+        *ngIf="isUserFormSubmitted && userFormControls['firstName'].errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="userFormControls['firstName'].errors['required']">
+          First Name is required must be a valid
+        </div>
+      </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Second Name:</label>
+    <span>
+    <input
+      type="text"
+      class="form-control"
+      id="inputLastName"
+      value="{{ userData.lastName }}"
+      formControlName="lastName"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['lastName'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['lastName'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['lastName'].errors['required']">
+        Second Name is required must be a valid
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Email ID:</label>
+    <span>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail"
+      value="{{ userData.email }}"
+      formControlName="email"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['email'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['email'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['email'].errors['required']">
+        Email is required
+      </div>
+      <div *ngIf="userFormControls['email'].errors['email']">
+        Please enter valid email
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Password:</label>
+    <span>
+    <input
+      type="password"
+      class="form-control"
+      id="inputPassword"
+      placeholder="Password"
+      formControlName="password"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['password'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['password'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['password'].errors['required']">
+        Password is required
+      </div>
+      <div
+        *ngIf="
+          !userFormControls['password'].errors['minLength'] &&
+          !userFormControls['password'].errors['required']
+        "
+      >
+        Password must be at least 6 characters
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Confirm Password:</label>
+    <span>
+    <input
+      type="password"
+      class="form-control"
+      id="inputConfirmPassword"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword"
+      [ngClass]="{
+        'is-invalid':
+          isUserFormSubmitted && userFormControls['confirmPassword'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['confirmPassword'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['confirmPassword'].errors['required']">
+        Confirm Password is required
+      </div>
+      <div
+        *ngIf="
+          userFormControls['confirmPassword'].errors['appConfirmEqualValidator']
+        "
+      >
+        Password Mismatch
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Date Of Birth:</label>
+    <span>
+    <input
+      type="date"
+      class="form-control"
+      id="inputDOB"
+      value="{{ userData.dob }}"
+      formControlName="dob"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['dob'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['dob'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['dob'].errors['required']">
+        Password is required
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Phone Num:</label>
+    <span>
+    <input
+      type="text"
+      class="form-control"
+      id="inputPhNum"
+      value="{{ userData.phNum }}"
+      placeholder="Enter Phone Number"
+      formControlName="phNum"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['phNum'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['phNum'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="userFormControls['phNum'].errors['required']">
+        Phone Number is required
+      </div>
+    </div>
+    </span>
+  </div>
+  <div class="form-group  ">
+    <label for="inputFirstName">Image URL:</label>
+    <span>
+    <input
+      type="url"
+      class="form-control"
+      id="inputPhoto"
+      value="{{ userData.photo }}"
+      placeholder="Enter Image URL"
+      formControlName="photo"
+      [ngClass]="{
+        'is-invalid': isUserFormSubmitted && userFormControls['photo'].errors
+      }"
+    />
+    <div
+      *ngIf="isUserFormSubmitted && userFormControls['photo'].errors"
+      class="invalid-feedback"
+    >
+    </div>
+    </span>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

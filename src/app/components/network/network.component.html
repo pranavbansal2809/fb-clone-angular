@@ -1,0 +1,15 @@
+<div class="outerDiv">
+<app-user-basic-info></app-user-basic-info>
+<div *ngFor="let user of userData; index as i">
+  <div class="friendListDiv">
+    <div id="friendImageDiv">
+      <img src="{{ user.photo }}" id="friendImage" />
+    </div>
+    <div>
+      <p class="friendNameTextCSS"><b>{{ user.firstName }} {{ user.lastName}}</b></p>
+    </div>
+    <button type="submit" (click)="changeFriendStatus(i)" class="btn btn-primary"
+    id="friendBtn" #ButtonText>{{ user.friendStatus}}</button>
+  </div>
+</div>
+</div>

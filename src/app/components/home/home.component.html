@@ -1,0 +1,48 @@
+<div class="outerDiv">
+  <app-user-basic-info></app-user-basic-info>
+  <div class="newPostDiv">
+    <input
+      type="text"
+      id="postPara"
+      placeholder="Write new post"
+      class="form-control"
+      #textInput
+    />
+    <input
+      type="text"
+      id="postImg"
+      placeholder="Upload pic"
+      class="form-control"
+      #picInput
+    />
+    <button
+      type="submit"
+      class="btn btn-primary"
+      id="postBtn"
+      (click)="generateNewPost(textInput.value, picInput.value)"
+    >
+      Post
+    </button>
+  </div>
+  <div *ngFor="let post of userPosts; index as i">
+    <div class="existingPostDiv">
+      <div id="homePostImage">
+        <img src="{{ post.postImage }}" id="postImage" />
+      </div>
+      <div>
+        <p class="postTextCSS">{{ post.postText }}</p>
+      </div>
+      <div *ngIf="isAdmin">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          id="blockPostBtn"
+          (click)="updatePostStatus(i)"
+        >
+          <span *ngIf="post.isActive">Block</span>
+          <span *ngIf="!post.isActive">Activate</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

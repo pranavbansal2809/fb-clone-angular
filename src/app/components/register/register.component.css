@@ -1,0 +1,31 @@
+
+form{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+div{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.dataDisplay{
+  display: none;
+}
+
+button{
+  margin:10px;
+}
+.invalid-feedback{
+  text-align: left;
+}
